@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "AddTask";
+}
+
+@model Capstone4_TaskList.Models.Tasks
+<h1>Add Task</h1>
+
+<form action="AddTask" method="post">
+    <div>
+        <input type="text" name="Description" placeholder="Task Description" />
+        @Html.ValidationMessageFor(m => m.Description)
+        <input type="text" name="DueDate" placeholder="Due Date" />
+        @Html.ValidationMessageFor(m => m.DueDate)
+
+        <input type="submit" value="Add Task" />
+    </div>
+</form>
+

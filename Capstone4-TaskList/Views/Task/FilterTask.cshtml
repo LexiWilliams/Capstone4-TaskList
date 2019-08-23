@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "FilterTask";
+}
+
+<h1>Filter Tasks</h1>
+<form action="FilterTasks" method="post">
+    Filter by key word <br /><input type="text" name="searchString" id="searchString"/>
+    @Html.ActionLink("Search", "FilterKeyword")
+</form>
+<form action="FilterTasks" method="post" >
+    Filter by due date: task due by <br /><input type="date" name="searchDate" />
+    @Html.ActionLink("Search", "FilterDate")
+</form>
+<form action="FilterTasks" method="post">
+    Filter by completion status
+    <br /><select name="searchString">
+        <option value="True">True</option>
+        <option value="False">False</option>
+    </select>
+    @Html.ActionLink("Search", "FilterCompletion")
+</form>
+
+
