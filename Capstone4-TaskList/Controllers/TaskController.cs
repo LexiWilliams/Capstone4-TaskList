@@ -81,7 +81,7 @@ namespace Capstone4_TaskList.Controllers
             List<Tasks> taskList = _context.Tasks.Where(u => u.UserId == thisUser.Id).ToList();
             foreach(Tasks task in taskList)
             {
-                if (task.Description.Contains(searchString))
+                if (task.Description.ToLower().Contains(searchString.ToLower()))
                 {
                     filteredList.Add(task);
                 }
